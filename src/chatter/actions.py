@@ -4,6 +4,9 @@ from __future__ import unicode_literals
 
 from rasa_core.actions.action import Action
 from rasa_core.events import SlotSet
+import requests
+import json
+
 
 class ActionWeather(Action):
 	def name(self):
@@ -29,3 +32,58 @@ class ActionWeather(Action):
 		dispatcher.utter_message(response)
 		return [SlotSet('location',loc)]
 
+'''
+Table 
+ - customer
+ - position
+ - quantity
+ '''
+
+
+class FetchNRisky(Action):
+	def name(self):
+		return 'fetch_n_risky'
+
+	def run(self, dispatcher, tracker, domain):
+
+		request = {'table':'table_name','position':'quantity','customer':'customer_name','quantity':1}
+
+
+		request['table'] = tracker.get_slot('Table')
+		request['position'] = tracker.get_slot('position')
+		request['quantity'] = int(tracker.get_slot('quantity'))
+		request['customer_name'] = int(tracker.get_slot('customer_name'))
+
+
+		# requests.get()
+		
+		# query_response = requests.
+
+		response = """Ok, got it! Here are your risky{}{}{}""".format(table, position, quantity)
+
+		dispatcher.utter_message(response)
+		return [SlotSet('Table',table),SlotSet('position',position),SlotSet('quantity',quantity),SlotSet('customer_name',customer_name)]
+
+class FetchRiskScore(Action):
+	def name(self):
+		return 'fetch_risk_scores'
+
+	def run(self, dispatcher, tracker, domain):
+
+		request = {'table':'table_name','position':'quantity','customer':'customer_name','quantity':1}
+
+
+		request['table'] = tracker.get_slot('Table')
+		request['position'] = tracker.get_slot('position')
+		request['quantity'] = int(tracker.get_slot('quantity'))
+		request['customer_name'] = int(tracker.get_slot('customer_name'))
+
+
+		# requests.get()
+		
+		# query_response = requests.
+
+		response = """fetch risk score our risky{}{}{}""".format(table, position, quantity)
+
+		dispatcher.utter_message(response)
+		return [SlotSet('Table',table),SlotSet('position',position),SlotSet('quantity',quantity),SlotSet('customer_name',customer_name)]

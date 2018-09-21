@@ -10,8 +10,8 @@ def train_nlu(data, config, model_dir):
 	model_directory = trainer.persist(model_dir, fixed_model_name = 'pramata_chatter')
 	
 def run_nlu():
-	interpreter = Interpreter.load('./models/nlu/default/pramatabot', RasaNLUConfig('config_spacy.json'))
-	print(interpreter.parse(u"Who is my most riskiest customer?"))
+	interpreter = Interpreter.load('./models/nlu/default/pramata_chatter', RasaNLUConfig('config_spacy.json'))
+	print(interpreter.parse(u"What is the risk of Arun?"))
 	
 if __name__ == '__main__':
 	# train_nlu('./data/data.json', 'config_spacy.json', './models/nlu')

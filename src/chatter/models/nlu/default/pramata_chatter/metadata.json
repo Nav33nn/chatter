@@ -11,7 +11,7 @@
     ],
     "training_data": "training_data.json",
     "spacy_model_name": "en",
-    "regex_featurizer": null,
+    "regex_featurizer": "regex_featurizer.json",
     "entity_extractor_crf": {
         "model_file": "crf_model.pkl",
         "crf_features": [
@@ -45,8 +45,8 @@
         "BILOU_flag": true,
         "version": 1
     },
-    "entity_synonyms": null,
+    "entity_synonyms": "entity_synonyms.json",
     "intent_classifier_sklearn": "intent_classifier.pkl",
-    "trained_at": "20180921-113734",
+    "trained_at": "20180921-125030",
     "rasa_nlu_version": "0.11.4"
 }
