@@ -2,31 +2,51 @@ action_factory: null
 action_names:
 - utter_greet
 - utter_goodbye
-- utter_ask_location
-- action_weather
+- utter_immature
+- utter_happy
+- fetch_n_risky
+- fetch_risk_scores
 actions:
 - utter_greet
 - utter_goodbye
-- utter_ask_location
-- actions.ActionWeather
+- utter_immature
+- utter_happy
+- actions.FetchNRisky
+- actions.FetchRiskScore
 config:
   store_entities_as_slots: true
 entities:
-- location
+- Table
+- customer
+- position
+- quantity
 intents:
 - greet
 - goodbye
 - inform
+- immature
+- happy
 slots:
-  location:
+  Table:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  customer:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  position:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  quantity:
     initial_value: null
     type: rasa_core.slots.TextSlot
 templates:
-  utter_ask_location:
-  - text: In what location?
   utter_goodbye:
   - text: Talk to you later.
   - text: Bye bye :(
   utter_greet:
   - text: Hello! How can I help?
+  utter_happy:
+  - text: Im glad I could help!
+  utter_immature:
+  - text: Hey, I was born a couple of mins back. Please go light on me!
 topics: []

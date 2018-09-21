@@ -32,7 +32,7 @@ def train_dialogue(domain_file = 'risk_domain.yml',
 	return agent
 	
 def run_weather_bot(serve_forever=True):
-	interpreter = RasaNLUInterpreter('./models/nlu/default/weathernlu')
+	interpreter = RasaNLUInterpreter('./models/nlu/default/pramata_chatter')
 	agent = Agent.load('./models/dialogue', interpreter = interpreter)
 	
 	if serve_forever:

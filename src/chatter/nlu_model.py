@@ -11,7 +11,7 @@ def train_nlu(data, config, model_dir):
 	
 def run_nlu():
 	interpreter = Interpreter.load('./models/nlu/default/pramata_chatter', RasaNLUConfig('config_spacy.json'))
-	print(interpreter.parse(u"What is the risk of Arun?"))
+	print(interpreter.parse(u"Who is my risky customer?"))
 	
 if __name__ == '__main__':
 	# train_nlu('./data/data.json', 'config_spacy.json', './models/nlu')

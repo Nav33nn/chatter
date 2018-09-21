@@ -2,12 +2,10 @@
   "action_fingerprints": {
     "action_listen": {
       "slots": [
-        "location"
-      ]
-    },
-    "action_weather": {
-      "slots": [
-        "location"
+        "Table",
+        "position",
+        "quantity",
+        "customer"
       ]
     },
     "utter_goodbye": {
@@ -15,12 +13,15 @@
     },
     "null": {
       "slots": [
-        "location"
+        "Table",
+        "position",
+        "quantity",
+        "customer"
       ]
     }
   },
   "rasa_core": "0.8.2",
-  "max_history": 3,
+  "max_history": 2,
   "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble",
   "policy_names": [
     "rasa_core.policies.memoization.MemoizationPolicy",

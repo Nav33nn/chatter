@@ -8,6 +8,8 @@ import requests
 import json
 
 
+'''
+
 class ActionWeather(Action):
 	def name(self):
 		return 'action_weather'
@@ -32,7 +34,7 @@ class ActionWeather(Action):
 		dispatcher.utter_message(response)
 		return [SlotSet('location',loc)]
 
-'''
+
 Table 
  - customer
  - position
@@ -49,17 +51,20 @@ class FetchNRisky(Action):
 		request = {'table':'table_name','position':'quantity','customer':'customer_name','quantity':1}
 
 
-		request['table'] = tracker.get_slot('Table')
-		request['position'] = tracker.get_slot('position')
-		request['quantity'] = int(tracker.get_slot('quantity'))
-		request['customer_name'] = int(tracker.get_slot('customer_name'))
+		table = tracker.get_slot('Table')
+		position= tracker.get_slot('position')
+		quantity = tracker.get_slot('quantity')
+		customer = tracker.get_slot('customer')
 
-
+		PARAMS = {'table':table,'position':position,'customer':quantity,'quantity':customer} 
+		URL = 'http://192.168.1.1:3000/contracts'
 		# requests.get()
 		
 		# query_response = requests.
+		r = requests.get(url = URL, params = PARAMS) 
+		data = r.json()
 
-		response = """Ok, got it! Here are your risky{}{}{}""".format(table, position, quantity)
+		response = """Ok, got it! Here are the customers {} """.format(data['customers'])
 
 		dispatcher.utter_message(response)
 		return [SlotSet('Table',table),SlotSet('position',position),SlotSet('quantity',quantity),SlotSet('customer_name',customer_name)]
@@ -73,17 +78,16 @@ class FetchRiskScore(Action):
 		request = {'table':'table_name','position':'quantity','customer':'customer_name','quantity':1}
 
 
-		request['table'] = tracker.get_slot('Table')
-		request['position'] = tracker.get_slot('position')
-		request['quantity'] = int(tracker.get_slot('quantity'))
-		request['customer_name'] = int(tracker.get_slot('customer_name'))
+		table = tracker.get_slot('Table')
+		position= tracker.get_slot('position')
+		quantity = tracker.get_slot('quantity')
+		customer = tracker.get_slot('customer')
 
 
 		# requests.get()
 		
 		# query_response = requests.
-
-		response = """fetch risk score our risky{}{}{}""".format(table, position, quantity)
+		response = """Ok, got it!\n  request['table'] = {} request['position'] = {} request['quantity'] = {} request['customer'] ={}""".format(table, position, quantity, customer)
 
 		dispatcher.utter_message(response)
-		return [SlotSet('Table',table),SlotSet('position',position),SlotSet('quantity',quantity),SlotSet('customer_name',customer_name)]
+		return [SlotSet('Table',table),SlotSet('position',position),SlotSet('quantity',quantity),SlotSet('customer_name',customer)]
