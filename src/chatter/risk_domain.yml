@@ -1,6 +1,14 @@
 slots:
-  location:
+  Table:
     type: text
+  customer:
+    type: text
+  position:
+    type: text
+  quantity:
+    type: text  
+    initial_value: '1'
+
 
 
 intents:
@@ -10,7 +18,11 @@ intents:
 
 
 entities:
- - location
+ - Table 
+ - customer
+ - position
+ - quantity
+
 
 templates:
   utter_greet:
@@ -18,12 +30,14 @@ templates:
   utter_goodbye:
     - 'Talk to you later.'
     - 'Bye bye :('
-  utter_ask_location:
-    - 'In what location?'
-
+  utter_immature:
+    - 'Hey, I was born a couple of mins back. Please go light on me!'
+  utter_happy:
+    - 'I'm glad I could help!''
 
 actions:
  - utter_greet
  - utter_goodbye
  - utter_ask_location
- - actions.ActionWeather
+ - actions.FetchNRisky
+ - actions.FetchRiskScore
