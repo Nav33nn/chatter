@@ -14,7 +14,7 @@ from rasa_core.interpreter import RasaNLUInterpreter
 
 logger = logging.getLogger(__name__)
 
-def train_dialogue(domain_file = 'weather_domain.yml',
+def train_dialogue(domain_file = 'risk_domain.yml',
 					model_path = './models/dialogue',
 					training_data_file = './data/stories.md'):
 					

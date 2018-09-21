@@ -5,6 +5,11 @@
         "location"
       ]
     },
+    "action_weather": {
+      "slots": [
+        "location"
+      ]
+    },
     "utter_goodbye": {
       "slots": []
     },
@@ -12,14 +17,9 @@
       "slots": [
         "location"
       ]
-    },
-    "action_weather": {
-      "slots": [
-        "location"
-      ]
     }
   },
-  "rasa_core": "0.8.0",
+  "rasa_core": "0.8.2",
   "max_history": 3,
   "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble",
   "policy_names": [
