@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Table",
+        "pattern": "risk|product"
+    },
+    {
+        "name": "Table",
+        "pattern": "risk|product"
+    },
+    {
+        "name": "quantity",
+        "pattern": "[0-9]*"
+    },
+    {
+        "name": "Table",
+        "pattern": "risk|product"
+    }
+]
