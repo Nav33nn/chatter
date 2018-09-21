@@ -1,0 +1,176 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 11,
+            "end": 19,
+            "value": "riskiest",
+            "entity": "table"
+          }
+        ],
+        "text": "Who is my  riskiest customer?"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 11,
+            "end": 14,
+            "value": "top",
+            "entity": "position"
+          },
+          {
+            "start": 15,
+            "end": 16,
+            "value": "5",
+            "entity": "quantity"
+          },
+          {
+            "start": 17,
+            "end": 22,
+            "value": "risky",
+            "entity": "table"
+          }
+        ],
+        "text": "Who are my top 5 risky customers?"
+      },
+      {
+        "intent": "greet",
+        "entities": [],
+        "text": "Hey"
+      },
+      {
+        "intent": "greet",
+        "entities": [],
+        "text": "Hello, how are you doing?"
+      },
+      {
+        "intent": "greet",
+        "entities": [],
+        "text": "Hey there, how are you doing?"
+      },
+      {
+        "intent": "goodbye",
+        "entities": [],
+        "text": "thanks for your help"
+      },
+      {
+        "intent": "goodbye",
+        "entities": [],
+        "text": "thank you"
+      },
+      {
+        "intent": "goodbye",
+        "entities": [],
+        "text": "bye "
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 12,
+            "end": 17,
+            "value": "least",
+            "entity": "position"
+          },
+          {
+            "start": 18,
+            "end": 23,
+            "value": "risky",
+            "entity": "table"
+          }
+        ],
+        "text": "What are my least risky customers?"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 9,
+            "end": 15,
+            "value": "bottom",
+            "entity": "position"
+          },
+          {
+            "start": 16,
+            "end": 17,
+            "value": "5",
+            "entity": "quantity"
+          },
+          {
+            "start": 18,
+            "end": 23,
+            "value": "risky",
+            "entity": "table"
+          }
+        ],
+        "text": "What are bottom 5 risky customers?"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 12,
+            "end": 16,
+            "value": "risk",
+            "entity": "table"
+          },
+          {
+            "start": 21,
+            "end": 34,
+            "value": "National Bank",
+            "entity": "customer"
+          }
+        ],
+        "text": "What is the risk for National Bank?"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 13,
+            "end": 16,
+            "value": "top",
+            "entity": "position"
+          },
+          {
+            "start": 17,
+            "end": 19,
+            "value": "5 ",
+            "entity": "quantity"
+          },
+          {
+            "start": 19,
+            "end": 24,
+            "value": "risky",
+            "entity": "table"
+          },
+          {
+            "start": 48,
+            "end": 55,
+            "value": "renewal",
+            "entity": "adjective"
+          }
+        ],
+        "text": "What are the top 5 risky customers upcoming for renewal?"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 12,
+            "end": 20,
+            "value": "riskiest",
+            "entity": "table"
+          }
+        ],
+        "text": "Which is my riskiest customer?"
+      }
+    ],
+    "regex_features": [],
+    "entity_synonyms": []
+  }
+}
